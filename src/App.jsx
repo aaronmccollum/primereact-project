@@ -37,16 +37,16 @@ export default function App() {
           <InputText
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            className=".p-inputtext-sm"
+            className="p-inputtext-sm input-box-custom"
           />
           <Button
-            className="pi pi-filter-slash"
+            className="pi pi-filter-slash button-custom"
             severity="info"
             outlined
           />
         </div>
         <Button
-          className="pi pi-bars"
+          className="pi pi-bars button-custom"
           severity="info"
         />
       </div>
