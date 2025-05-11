@@ -11,12 +11,16 @@ body {
     align-items: center;
 }
 
-.header-button {
-    margin-left: 5px;
-}
-
 /* CSS styling for the panel */
 .mypanel .p-panel-header {
     background-color: #07c4e8;
     color: #ffffff;
+}
+
+/* Sstyles for the text input and button above tables */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 }

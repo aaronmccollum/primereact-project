@@ -12,6 +12,7 @@ import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Paginator } from 'primereact/paginator';
 import { Accordion, AccordionTab } from 'primereact/accordion';
+import { InputText } from 'primereact/inputtext';
 
 // Importing data from external file
 import projects from './projects';
@@ -21,26 +22,34 @@ import actions from './actions';
 export default function App() {
 
   const [activeIndex, setActiveIndex] = useState();
+  const [value, setValue] = useState("");
 
   return (
     <>
       <div className="header">
         <h1>My Dashboard</h1>
-        <div className="header-buttons">
-          <Button
-            label="Create"
-            className="p-button-info p-button-rounded header-button"
-          />
-          <Button
-            label="Export"
-            className="p-button-secondary p-button-rounded header-button"
-          />
-        </div>
       </div>
 
       <br></br>
       <br></br>
-
+      <div className="table-header">
+        <div className="table-header-left">
+          <InputText
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            className=".p-inputtext-sm"
+          />
+          <Button
+            className="pi pi-filter-slash"
+            severity="info"
+            outlined
+          />
+        </div>
+        <Button
+          className="pi pi-bars"
+          severity="info"
+        />
+      </div>
       <Accordion activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} multiple>
           <AccordionTab header="My Projects">
             <DataTable value={projects}>
