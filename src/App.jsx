@@ -4,6 +4,7 @@ import { useState } from 'react';
 // Importing CSS stylesheet and Primereact theme
 import './App.css';
 import 'primereact/resources/themes/tailwind-light/theme.css';
+import 'primeicons/primeicons.css';
 
 // Importing individual components
 import { Button } from 'primereact/button';
