@@ -17,6 +17,8 @@ I haven't done too much with this yet, but I want to get it working soon to wher
 I added this and embedded my DataTables inside the three Accordians. Setting the 'multiple' prop with no value lets you open multiple tabs at a time. The 'multiple' is set on the parent <Accordian> so it affects everything inside it.
 ### InputText
 I added this most recently to have a future search box.
+### Menu
+5/12/25 - Added a Menu that will appear when you click the blue "hamburger" button. This references an array of objects with a label and icon for each that determine the menu items. I use a `useRef` React hook to reference the menu.
 
 ## CSS Styles
 ### App.css
