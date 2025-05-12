@@ -26,6 +26,7 @@ body {
 
 .button-custom {
     margin-bottom: 5px;
+    padding-right: 9px;  /* For some reason, this centers the icons */
 }
 
 /* Styles for input box */
