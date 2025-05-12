@@ -1,5 +1,6 @@
 // Importing React stuff
 import { useState } from 'react';
+import { useRef } from 'react';
 
 // Importing CSS stylesheet and Primereact theme
 import './App.css';
@@ -13,6 +14,7 @@ import { Column } from 'primereact/column';
 import { Paginator } from 'primereact/paginator';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { InputText } from 'primereact/inputtext';
+import { Menu } from 'primereact/menu';
 
 // Importing data from external file
 import projects from './projects';
@@ -23,6 +25,23 @@ export default function App() {
 
   const [activeIndex, setActiveIndex] = useState();
   const [value, setValue] = useState("");
+
+  const menu = useRef(null);
+
+  const topMenuItems = [
+    {
+      label: "Create",
+      icon: "pi pi-plus"
+    },
+    {
+      label: "Import",
+      icon: "pi pi-file-import"
+    },
+    {
+      label: "Settings",
+      icon: "pi pi-cog"
+    }
+  ]
 
   return (
     <>
@@ -45,9 +64,17 @@ export default function App() {
             outlined
           />
         </div>
+        <Menu
+          model={topMenuItems}
+          popup
+          ref={menu}
+          id="top-right-menu"
+          popupAlignment="right"
+        />
         <Button
           className="pi pi-bars button-custom"
           severity="info"
+          onClick={(event) => menu.current.toggle(event)}
         />
       </div>
       <Accordion activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} multiple>
