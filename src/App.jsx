@@ -7,6 +7,9 @@ import './App.css';
 import 'primereact/resources/themes/tailwind-light/theme.css';
 import 'primeicons/primeicons.css';
 
+// Importing other components
+import Header from './Header'
+
 // Importing individual components
 import { Button } from 'primereact/button';
 import { DataTable } from 'primereact/datatable';
@@ -45,9 +48,7 @@ export default function App() {
 
   return (
     <>
-      <div className="header">
-        <h1>My Dashboard</h1>
-      </div>
+      <Header />
 
       <br></br>
       <br></br>
