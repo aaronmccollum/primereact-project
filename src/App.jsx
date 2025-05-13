@@ -9,6 +9,7 @@ import 'primeicons/primeicons.css';
 
 // Importing other components
 import Header from './Header'
+import ReportHeader from './ReportHeader';
 
 // Importing individual components
 import { Button } from 'primereact/button';
@@ -29,8 +30,6 @@ export default function App() {
   const [activeIndex, setActiveIndex] = useState();
   const [value, setValue] = useState("");
 
-  const menu = useRef(null);
-
   const topMenuItems = [
     {
       label: "Create",
@@ -49,35 +48,10 @@ export default function App() {
   return (
     <>
       <Header />
+      <br></br>
+      <br></br>
+      <ReportHeader />
 
-      <br></br>
-      <br></br>
-      <div className="table-header">
-        <div className="table-header-left">
-          <InputText
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            className="p-inputtext-sm input-box-custom"
-          />
-          <Button
-            className="pi pi-filter-slash button-custom"
-            severity="info"
-            outlined
-          />
-        </div>
-        <Menu
-          model={topMenuItems}
-          popup
-          ref={menu}
-          id="top-right-menu"
-          popupAlignment="right"
-        />
-        <Button
-          className="pi pi-bars button-custom"
-          severity="info"
-          onClick={(event) => menu.current.toggle(event)}
-        />
-      </div>
       <Accordion activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} multiple>
           <AccordionTab header="My Projects">
             <DataTable value={projects}>
