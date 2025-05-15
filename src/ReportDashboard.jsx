@@ -26,7 +26,7 @@ export default function ReportDashboard() {
     return (
         <>
             <Accordion activeIndex={activeIndex} onTabChange={(e) => setActiveIndex(e.index)} multiple>
-                <AccordionTab header="My Projects">
+                <AccordionTab header={"My Projects (" + projects.length + ")"}>
                     <DataTable
                         value={projects}
                         paginator
@@ -47,7 +47,7 @@ export default function ReportDashboard() {
                             <Column field="principleInvestigator" header="Principal Investigator"></Column>
                     </DataTable>
                 </AccordionTab>
-                <AccordionTab header="My Assignments">
+                <AccordionTab header={"My Assignments (" + assignments.length + ")"}>
                     <DataTable value={assignments}>
                         <Column field="assignment" header="Assignment"></Column>
                         <Column field="actionType" header="Action Type"></Column>
@@ -58,7 +58,7 @@ export default function ReportDashboard() {
                         <Column field="program" header="Program"></Column>
                     </DataTable>
                 </AccordionTab>
-                <AccordionTab header="My Actions">
+                <AccordionTab header={"My Actions (" + actions.length + ")"}>
                     <DataTable value={actions}>
                         <Column field="actionStage" header="Action Stage"></Column>
                         <Column field="actionType" header="Action Type"></Column>
