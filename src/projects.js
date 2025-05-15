@@ -44,4 +44,49 @@ export default [
         program: "Air Speed Aviation",
         principleInvestigator: "Bridge Keeper"
     },
+    {
+        projectNumber: "22RT0213",
+        projectTitle: "Cats and Dogs",
+        programOfficer: "Amy Jo",
+        office: "RTB",
+        projectType: "Traditional",
+        program: "Biophysics",
+        principleInvestigator: "Kevin Smith"
+    },
+    {
+        projectNumber: "19RT0384",
+        projectTitle: "Caffine amounts in coffee",
+        programOfficer: "Paul McCartney",
+        office: "RTA",
+        projectType: "Outgoing MFD",
+        program: "Food and stuff",
+        principleInvestigator: "Jerry Jeudy"
+    },
+    {
+        projectNumber: "24IO0034",
+        projectTitle: "Collecting rain water for later use",
+        programOfficer: "Aaron McCollum",
+        office: "RTB",
+        projectType: "Traditional",
+        program: "Hydroelectric",
+        principleInvestigator: "Shadeur Sanders"
+    },
+    {
+        projectNumber: "22IO0132",
+        projectTitle: "Vinegar and baking sode as natural cleaners",
+        programOfficer: "Paul McCartney",
+        office: "RTA",
+        projectType: "Traditional",
+        program: "Natural sciences",
+        principleInvestigator: "Myles Garrett"
+    },
+    {
+        projectNumber: "25RT0002",
+        projectTitle: "Excercising to get 'AFIT'",
+        programOfficer: "Shaun T",
+        office: "RTC",
+        projectType: "AFIT",
+        program: "Biophysics",
+        principleInvestigator: "Jamir Miller"
+    }
 ]
